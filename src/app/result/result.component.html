@@ -1,0 +1,37 @@
+
+
+<div class="container footer-fix">
+
+   <div class="row">
+      <!-- result congratulations -->
+      <div class="col-md-6 col-md-offset-3 result-congrats text-center padding-tb-50">
+         <h4>Congratulations</h4>
+         <p *ngIf="resultData.total != undefined" class="result_score {{ resultData.answersCount == 0 ? 'red':'' }}" >
+            You scored {{resultData.answersCount}} out of {{resultData.questionCount}} Questions.
+         </p>
+         <p *ngIf="resultRIASEC_MBTI.key != undefined">
+            Your personality type is <span style="color:red">{{resultRIASEC_MBTI.key}} </span><br> which means {{resultRIASEC_MBTI.meaning}}
+         </p>
+
+         <div *ngIf="resultData.answersCount == undefined && resultRIASEC_MBTI.key != undefined">
+            <h5 class="text-center">Free Test Result</h5>
+
+            <div class="col-md-4 col-md-offset-4 flex f-justify-space">
+               <p>
+                  <span  class="text-strike pay-money"  ><i class="fa fa-inr" aria-hidden="true"></i> 999</span>
+               </p>
+               <p>
+                  <span class="pay-money"><i class="fa fa-inr" aria-hidden="true"></i> {{resultRIASEC_MBTI.amount?resultRIASEC_MBTI.amount:'399'}}</span>
+               </p>
+            </div>
+            
+         </div>
+         
+         
+         <button *ngIf="resultData.answersCount == undefined && resultRIASEC_MBTI.key != undefined" (click)="goToPayment()" type="button" class="btn btn-success">Get Detailed
+         personalized result</button>
+      </div>
+   </div>
+
+
+</div>

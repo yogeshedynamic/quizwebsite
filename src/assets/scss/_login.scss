@@ -1,0 +1,131 @@
+.user-login-main {
+    padding: 50px 0 50px 0;
+  
+    .main-div {
+      background: $white-color none repeat scroll 0 0;
+      @include bradius(2px);
+      margin: 0 auto;
+      border: 1px solid $orange-color;
+      max-width: 35%;
+      padding: 25px 20px 60px 20px;
+    }
+  
+    input {
+      &[type=text], &[type=password], &[type=email],&[type=tel] {
+        width: 100%;
+        padding: 0px 20px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid $color-blue;
+        box-sizing: border-box;
+      }
+    }
+  
+    button {
+      background-color: $orange-color;
+      color: $white-color;
+      padding: 4px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    .cancelbtn {
+      width: auto;
+      float: left;
+      padding: 2px 18px;
+      background-color: $light-red-color;
+    }
+  }
+  
+  .form-head {
+    text-align: center;
+    padding-bottom: 10px;
+  
+    strong {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+  
+  .formtop {
+    text-align: left;
+  }
+  
+  /*.formbottom{padding-bottom: 20px;}*/
+  
+
+  .form-area{
+    margin-top:10px;
+    margin-bottom: 50px;
+  }
+
+  .user-login-main span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  .login-social {
+    text-align: center;
+}
+  .social {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.fblogin{color:#3b5898;}
+.twlogin{color:#00abee;}
+.gplogin{color:#dd4c39;}
+.linkdlogin{color:#0077b5;}
+.instalogin{color: #f09433;}
+
+/*  user profile */@at-root
+.user-profile {
+  margin: auto;
+	width: 25em; 
+  height: 11em;
+  background: #fff;
+  border-radius: .3em;
+  margin-bottom: 50px;
+  img{
+  height: 6.23em;
+  width: 6.23em;
+  border-radius: 18em;
+  }
+  .username {
+    margin: auto;
+  }
+
+}
+
+.user-quiz-data{
+  margin-bottom: 15px;
+}
+
+
+
+
+
+  @media only screen and (max-width: 991px) {
+    .user-login-main {
+      .main-div {
+        max-width: 90%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .user-login-main {
+      span.psw {
+        display: block;
+        float: none;
+      }
+  
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+  }

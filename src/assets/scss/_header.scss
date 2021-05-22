@@ -1,0 +1,258 @@
+.header_top {
+    background-color: $light-blue;
+    span {
+        color: $orange-color;
+    }
+    li {
+        display: inline-block;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $black-color;
+        letter-spacing: 1px;
+        padding: 0 22px 0 0;
+        vertical-align: middle;
+    }
+    a {
+        color: $color-blue;
+    }
+}
+.header_top_left {
+    text-align: $left-align;
+}
+
+.header_top_right {
+    text-align: $right-align;
+}
+
+#clickUser {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 0px;
+  
+    &:after {
+      position: absolute;
+      content: "\f0d7";
+      color: $orange-color;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      -webkit-font-smoothing: antialiased;
+      margin: 5px 0px 0 4px;
+    }
+  }
+  
+  .UserMenu {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    background: $grey-color;
+    padding: 15px 20px 10px 10px;
+    top: 90%;
+    width: 210px;
+    text-align: left;
+    display: none;
+  
+    ul li {
+      display: block;
+  
+      a {
+        font-size: 14px;
+        font-weight: $light-bold-font;
+        color: $color-blue;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  li.UserName {
+    font-weight: $bold-font;
+    padding: 0 0 10px 0;
+  }
+  
+  i.fa.fa-user-circle {
+    color: $orange-color;
+  }
+
+  .mynavigation {
+    float: left;
+    width: 100%;
+  }
+  
+  .nav-container {
+    width: 100%;
+  }
+
+  nav {
+    float: right;
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        float: left;
+        position: relative;
+  
+        a {
+          display: block;
+          padding: 0 10px;
+          line-height: 90px;
+          color: $black-color;
+          text-decoration: none;
+          text-transform: uppercase;
+  
+          &:visited {
+            display: block;
+            padding: 0 10px;
+            line-height: 90px;
+            color: $black-color;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+  
+          &:hover, &:visited:hover {
+            color: $orange-color;
+          }
+  
+          &:not(:only-child):after, &:visited:not(:only-child):after {
+            padding-left: 4px;
+            content: ' ▾';
+          }
+        }
+  
+        ul li {
+          min-width: 240px;
+  
+          a {
+            padding: 10px;
+            line-height: 15px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    background-color: $white-color;
+  }
+  
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: -11px;
+    right: 0;
+    background: $color-blue;
+    height: 45px;
+    width: 45px;
+  }
+
+  #nav-toggle {
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    cursor: pointer;
+  
+    span {
+      cursor: pointer;
+      @include bradius(1px);
+      height: 4px;
+      width: 30px;
+      background: $white-color;
+      position: absolute;
+      display: block;
+      content: '';
+      transition: all 300ms ease-in-out;
+  
+      &:before, &:after {
+        cursor: pointer;
+        @include bradius(1px);
+        height: 4px;
+        width: 30px;
+        background: $white-color;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+      }
+  
+      &:before {
+        top: -10px;
+      }
+  
+      &:after {
+        bottom: -10px;
+      }
+    }
+  
+    &.active span {
+      background-color: transparent;
+  
+      &:before, &:after {
+        top: 0;
+      }
+  
+      &:before {
+        transform: rotate(45deg);
+      }
+  
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .search_right {
+    padding-top: 25px;
+  }
+  
+  
+
+
+
+  
+
+.banner-hero {
+    background-color: $color-blue;
+    height: auto; 
+    img {
+      width: 100%;
+    }
+  }
+
+.breadcrumb {
+    padding: 10px 16px;
+    list-style: none; 
+    background-color: transparent; 
+    text-align: $right-align;
+    margin-bottom:0;
+    li {
+      display: inline;
+      font-size: 18px;
+      color:$white-color;
+  
+      + li:before {
+        padding: 8px;
+        color: $black-color;
+        content: "/\00a0";
+      }
+      a {
+        color: $orange-color;
+        text-decoration: none;
+  
+        &:hover {
+          color: $white-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+
+ 
+

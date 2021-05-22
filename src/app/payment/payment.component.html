@@ -1,0 +1,72 @@
+
+                <!--Mandatory Form 2 result paid request -->
+                <div class="result-paid-req padding-tb-50 footer-fix">
+                    <p>Have a coupen code? Apply here</p>
+                    <p><a>Enter coupen code</a></p>
+                    <div class="form-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 ">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input type="text" [(ngModel)]="formData.coupen" name="coupen" id="coupen" class="form-control input-lg" placeholder="Enter Coupen Code" tabindex="1" required>
+                                        </div>
+                                        <div class="row pay-method" *ngIf="this.routeParams['price']">
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <button type="submit" (click)="callCoupenAPI()" id="apply-promo" class="btn btn-success">Apply</button>
+                                                <div style="clear:both"></div>
+                                                <p>Payble Amount <span id="pay-amount">{{basicAmount}}</span></p>
+                                                <p *ngIf="discount > 0">Coupen Applied <span id="discount-amt">{{discount}}</span></p>
+                                                <hr />
+                                                <p>Total Amount <span id="total-amt">{{amount}}</span></p>
+                                                <hr/>
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                        <div class="choose-payment-option">
+                                                            <div [hidden]="discount >= basicAmount" class="payment-option-header">
+                                                                <h4 id="choose-pay-optn">Choose Payment Option</h4>
+                                                                <ul class="flex f-wrap f-justify-space">
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="razorpay" name="answer" class="answer">
+                                                                        <label id="d_text" for="razorpay"><img class="payment-icon" src="assets/images/razorpay.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="paytm" name="answer" class="answer">
+                                                                        <label id="a_text" for="paytm"><img class="payment-icon" src="assets/images/paytm.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="phonepay" name="answer" class="answer">
+                                                                        <label id="b_text" for="phonepay"><img class="payment-icon" src="assets/images/phonepe.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="bhimupi" name="answer" class="answer">
+                                                                        <label id="c_text" for="bhimupi"><img class="payment-icon" src="assets/images/bhim.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="googlepay" name="answer" class="answer">
+                                                                        <label id="d_text" for="googlepay"><img class="payment-icon" src="assets/images/googlepay.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="rupay" name="answer" class="answer">
+                                                                        <label id="c_text" for="rupay"><img class="payment-icon" src="assets/images/rupay.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" [(ngModel)]="formData.paymentGateway" value="whatsapppay" name="answer" class="answer">
+                                                                        <label id="d_text" for="whatsapppay"><img class="payment-icon" src="assets/images/whatsapp.png" alt="payment-icon" /></label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <button type="submit" (click)="initOrder()" id="proceed-pay" class="btn btn-success">{{submit}}</button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mandatory form 2 result request end -->

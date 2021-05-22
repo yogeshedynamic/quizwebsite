@@ -1,0 +1,41 @@
+  <!-- User profile html start -->
+<div class="container footer-fix">
+    <div class="row" *ngIf="!!user">
+        <div class="col-sm-12 col-md-12 padding-tb-10">
+            <div class="user-profile">
+                <h1 class="title-pen"> User Profile</h1>
+                <div class="col-sm-12 col-md-12">
+                <div class="user-details">
+                    <div class="col-sm-4 col-md-4 col-xs-12">
+                        <img class="avatar" [src]="!!user.photoUrl?user.photoUrl:'assets/images/user-dummy.png'" alt="User pic" />
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-xs-12">
+                        <h6 class="userfullname"><span>Name: </span>{{user.name}}</h6>
+                        <h6 class="username"><span>User Name: </span>{{user.username}}</h6>
+                        <h6 class="useremail" *ngIf="user.email"><span>Email: </span>{{user.email}}</h6>
+                        <!-- <h6 class="usermobo"><span>Mobile: </span>8527684624</h6> -->
+                    </div>
+                </div>
+            </div>
+                <div style="clear:both;"></div>
+                <div class="col-sm-12 col-md-12 margin-tb-50" *ngIf="profileResults != undefined">
+                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 user-quiz-data" *ngFor="let result of profileResults">
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                            <span class="entypo-heart">TEST : <b>{{result.test_name}}</b></span>
+                        </div>
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                            <button class="btn btn-success" (click)="downloadResultPDF(result.pdf_url,result.id)">Download Result PDF</button>
+                        </div>
+                    </div>
+                     
+                    <div class="col-xs-12 col-sm-12 col-md-12 user-quiz-data" *ngIf="profileResults.length < 1">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <span class="entypo-heart">You have no results</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- user profile html end-->

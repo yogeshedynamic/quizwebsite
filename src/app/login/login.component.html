@@ -1,0 +1,48 @@
+<div class="form-area">
+  <div class="container footer-fix">
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+              <form role="form">
+                  <h2>Login</h2>
+                  <div class="form-group">
+                      <input type="text" [(ngModel)]="formData.user" name="username" class="form-control input-lg" placeholder="User Name" tabindex="1" required>
+                  </div>
+                  <div class="form-group">
+                      <input type="password" [(ngModel)]="formData.pass" name="password" class="form-control input-lg" placeholder="Password" tabindex="2" required>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12">
+                          <label>
+                              <input type="checkbox" [(ngModel)]="formData.rememberme" checked="checked" name="remember" tabindex="3"> Remember me
+                          </label>
+
+                    <div class="row text-center">
+                      <div class="col-xs-12 col-md-12 clear">
+                          <input type="submit" (click)="login()" [disabled]="!!!(formData.user && formData.pass)" value="Login" class="btn btn-success btn-block btn-lg" tabindex="4">
+                      </div>  
+                      <div class="psw clear margin-tb-10"><a class="a" (click)="register()">Don't have login, Register here</a></div>
+                      <div class="psw clear margin-tb-10"><a class="a" (click)="forgetPassword()">Forget password</a></div>                 
+                    </div>
+             
+
+
+                      </div>
+                      <div class="login-social margin-tb-10 clear">
+                          <p>Login Via Social Media</p>
+                          <a class="fblogin social" (click)="loggedInVia('fb')"><i class="fa fa-facebook-square"></i></a>
+                          <!-- <a class="twlogin social" ><i class="fa fa-twitter-square"></i></a> -->
+                          <a class="gplogin social" (click)="loggedInVia('google')"><i class="fa fa-google-plus-square"></i></a>
+                          <!-- <a class="linkdlogin social"><i class="fa fa-linkedin-square"></i></a>
+                          <a class="instalogin social"><i class="fa fa-instagram"></i></a> -->
+                      </div>
+
+                     <div class="login-social margin-tb-10 clear" *ngIf="checkPayload == null && routeParams !=null">
+                          <div class="psw clear margin-tb-10"><a class="a" (click)="loginAsGuest()">Login as guest</a></div>
+                      </div>
+                  </div>
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,258 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "src/assets/scss/styles.scss";
+
+body {font-size: 16px;
+    line-height: 2;
+    font-weight: $normal-font;
+    color:$primary-color;
+    font-family: $font-family;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        opacity: .8;
+        transition: 0.5s all;
+        text-decoration: none;
+    }
+}
+
+.no_padding {
+    padding: 0;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+h1.pgnotfound {
+    font-size: 12rem;
+    color: #ff0000;
+}
+.btn{
+    background-color: $orange-color;
+    color:$white-color;
+    &:hover{
+        background:darken($orange-color,10%);
+        color:$white-color;
+    }
+}
+
+.banner-content {
+    height: 60px;
+}
+
+//timer
+
+.timer{
+    color: darkblue;
+    float: right;
+    font-size: 2rem;
+}
+
+// active button class "green"
+.btn-active{
+    color: #fff;
+    background-color: #5cb85c !important;
+    border-color: #4cae4c;
+}
+
+.btn-active-img{
+    color: #fff;
+    background-color: #5cb85c !important;
+    border-color: #4cae4c;
+    border: 5px solid #4cae4c;
+}
+
+//logo
+.logo_left{
+    width:85px;
+
+    img{
+            max-width: 200px;
+            margin-top: 10px;
+    }
+}
+
+
+//bootstrap override -------------------
+
+.clear{
+    clear:both;
+}
+
+//modal
+.modal-header{
+    padding-bottom: 0px;
+}
+.modal-footer{
+    border-top: none;
+}
+
+//padding
+.padding-tb-50{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.padding-tb-10{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+//margin
+.margin-tb-50{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.margin-tb-10{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.margin-tb-5{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.margin-bottom-40{
+    margin-bottom: 40px;
+}
+
+.footer-fix{
+    min-height: 470px;
+}
+
+// result page score
+
+.result_score{
+    color: #f19100;
+    font-size: 2rem;
+    &.red{
+        color: red;
+    }
+}
+
+//anchor class
+
+.a{
+    cursor: pointer;
+}
+
+//--------------------------flex 
+
+.flex{
+    display: flex;
+    &.f-wrap{
+        flex-wrap: wrap;
+    }
+    &.f-justify-space{
+        justify-content: space-between;
+    }
+    &.f-center{
+        align-items: center;
+    }
+}
+
+
+//strike 
+.text-strike{
+    text-decoration: line-through;
+}
+
+
+
+// ---- home page bg
+
+
+.iq-bg{
+    background-color: #8589ef!important;
+}
+.personality-bg{
+    background-color: #35bee0!important;
+}
+.knowyourinterest-bg{
+    background-color: #2b9bfb!important;
+}
+
+.wellness-bg{
+    background-color: #59499e!important;
+}
+
+.mentor-bg{
+    background-color: #5cba47!important;
+}
+.counselling-bg{
+    background-color: #ff6ea1!important;
+}
+
+
+
+/*  Question slider */
+
+.quiz-slider{
+    //margin-bottom:100px;
+
+    ul.quiz-slider__q{
+        margin-top: 30px;
+        li{
+            margin-bottom: 20px;
+
+            label{
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .left,.right{
+        &.hide{
+            display: none;
+        }
+    }
+}
+
+.carousel-control {
+        top: 100%;
+        margin-top: 70px;
+    opacity: 1;
+}
+
+
+
+#myCarousel{
+    margin-bottom:150px;
+
+     
+}
+
+.carousel-control {
+    &.left, &.right {
+      background-image: none;
+    }
+}
+
+.carousel-inner>.item {
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    -o-transition: -o-transform .1s ease-in-out;
+    transition: transform .1s ease-in-out;
+     
+}
+
+.submit-btn-margin-fix{
+    margin-top: -76px;
+}

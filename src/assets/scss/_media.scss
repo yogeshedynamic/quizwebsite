@@ -1,0 +1,98 @@
+@media screen and (min-width: 799px) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+  
+  @media only screen and (max-width: 798px) {
+    .navigation {
+      background: $grey-color;
+    }
+  
+    .nav-mobile {
+      display: block;
+    }
+  
+    nav {
+      width: 100%;
+      padding: 30px 0 15px;
+  
+      ul {
+        display: none;
+  
+        li {
+          float: none;
+  
+          a {
+            padding: 15px;
+            line-height: 20px;
+          }
+  
+          ul li a {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  
+    .nav-dropdown {
+      position: static;
+    }
+    .quiz-block{
+      .quiz-block-single {
+        max-width: 50%;
+      }
+    }
+
+    
+  }
+
+
+
+
+  /* Landscape ipad */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    nav ul li a {
+      padding: 0 4px;
+  
+      &:visited {
+        padding: 0 4px;
+      }
+    }
+  }
+  
+  /* Portrait ipad */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+  
+  @media (max-width: 767px) {
+    .header_top_left, .header_top_right {
+      text-align: center;
+    }
+  
+    .logo_left img {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    #BaktoTop {
+      bottom: 58px;
+      right: 138px;
+    }
+   
+  }
+
+  @media only screen and (max-width: 480px) {
+
+  .quiz-block{
+    .quiz-block-single {
+      max-width: 100%;
+    }
+  }
+
+}
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    
+  }
