@@ -1,0 +1,4 @@
+npm i angularx-social-login
+
+logic
+https://docs.google.com/document/d/1-S1iG3uWL-8bars5qtyuFNSdkF4CFZ-sVoEU3FDsens/edit
